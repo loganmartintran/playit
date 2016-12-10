@@ -32,7 +32,11 @@ body.landing {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .navbar .link-container {
+=======
+.navbar .links-container {
+>>>>>>> checkpoint-5-collection_view
     display: table;
     position: absolute;
     top: 0;
@@ -59,7 +63,11 @@ body.landing {
 }
 
 .links-container .navbar-link:hover {
+<<<<<<< HEAD
     color: rgb(223,50,117);
+=======
+    color: rgb(233,50,117);
+>>>>>>> checkpoint-5-collection_view
 }
 
 .container {
