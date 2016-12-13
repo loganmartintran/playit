@@ -99,7 +99,6 @@ body.landing {
     content: " ";
     display: table;
 }
-
 .clearfix::after {
     clear: both;
 }
