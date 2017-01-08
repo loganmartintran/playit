@@ -47,7 +47,7 @@ var albumSweetTunes = {
 var createSongRow = function (songNumber, songName, songLength) {
     var template =  
         '<tr class="album-view-song-item">'
-     +  '<td class="song-item-number data-song-number="' + songNumber + '">' + songNumber + '</td>'
+     +  '<td class="song-item-number" "data-song-number"=' + songNumber + '">' + songNumber + '</td>'
      +  '  <td class="song-item-title">' + songName + '</td>'
      +  '  <td class="song-item-duration">' + songLength + '</td>'
      +  '</tr>'
@@ -86,7 +86,7 @@ var findParentByClassName = function(element, targetClass) {
 };
 
 var getSongItem = function(element) {
-    switch (element.ClassName) {
+    switch (element.className) {
         case 'album-song-button':
         case 'ion-play':
         case 'ion-pause':
