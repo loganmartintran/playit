@@ -77,6 +77,10 @@
     display: none;
 }
 
+.player-bar .song-name {
+    top: 1.1rem;
+}
+
 .seek-control {
     position: relative;
     font-size: 0.8rem;
