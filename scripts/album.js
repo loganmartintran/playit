@@ -165,7 +165,7 @@ window.onload = function() {
         });
     }
     
-    albumImage.addEventListener('click', function(event) {
+    $('.album-cover-art').click('click', function(event) {
         setCurrentAlbum(albums[index]);
         index++;
         if (index == albums.length) {
