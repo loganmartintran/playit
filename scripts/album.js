@@ -96,6 +96,7 @@ var updateSeekBarWhileSongPlays = function() {
             var $seekBar = $('.seek-control .seek-bar');
             
             updateSeekPercentage($seekBar, seekBarFillRatio);
+            setCurrentTimeInPlayerBar();
         });
     }
 };
@@ -155,6 +156,7 @@ var updatePlayerBarSong = function() {
     $('.currently-playing .artist-name').text(currentAlbum.artist);
     $('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + "-" + currentAlbum.artist);
     $('.main-controls .play-pause').html(playerBarPauseButton);
+    $('.total-time').text(currentSongFromAlbum.duration);
 };
 
 var nextSong = function() {
@@ -245,6 +247,18 @@ var setVolume = function(volume) {
     }
 }
 
+var setCurrentTimeInPlayerBar = function(currentTime) {
+    $('.current-time').text(currentSoundFile.getTime());
+}
+
+var setTotalTimeInPlayerBar = function(totalTime) {
+    $('.total-time').text(currentSoundFile.getDuration());
+}
+
+var filterTimeCode = function(timeInSeconds) {
+    
+}
+        
 var getSongNumberCell = function(number) {
     return $('.song-item-number[data-song-number="' + number + '"]');
 };
