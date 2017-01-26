@@ -38,7 +38,7 @@ var createSongRow = function (songNumber, songName, songLength) {
         '<tr class="album-view-song-item">'
      +  '<td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>'
      +  '  <td class="song-item-title">' + songName + '</td>'
-     +  '  <td class="song-item-duration">' + songLength + '</td>'
+     +  '  <td class="song-item-duration">' + filterTimeCode(songLength) + '</td>'
      +  '</tr>'
     ;
     
@@ -249,6 +249,7 @@ var setVolume = function(volume) {
 
 var setCurrentTimeInPlayerBar = function(currentTime) {
     $('.current-time').text(currentSoundFile.getTime());
+    
 }
 
 var setTotalTimeInPlayerBar = function(totalTime) {
@@ -256,7 +257,17 @@ var setTotalTimeInPlayerBar = function(totalTime) {
 }
 
 var filterTimeCode = function(timeInSeconds) {
-    
+    var min = Math.floor(parseInt(timeInSeconds) / 60);
+    var sec = Math.floor(parseInt(timeInSeconds % 60));
+
+  
+    function prettyPrint(string,pad,length) {
+        return (new Array(length+1).join(pad)+string).slice(-length);
+    }
+  
+    var finalTime = prettyPrint(min,'0',2) + ':' + prettyPrint(sec,'0',2);
+  
+    return finalTime;
 }
         
 var getSongNumberCell = function(number) {
