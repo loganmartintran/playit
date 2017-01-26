@@ -156,7 +156,7 @@ var updatePlayerBarSong = function() {
     $('.currently-playing .artist-name').text(currentAlbum.artist);
     $('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + "-" + currentAlbum.artist);
     $('.main-controls .play-pause').html(playerBarPauseButton);
-    $('.total-time').text(currentSongFromAlbum.duration);
+    $('.total-time').text(filterTimeCode(currentSongFromAlbum.duration));
 };
 
 var nextSong = function() {
@@ -247,13 +247,13 @@ var setVolume = function(volume) {
     }
 }
 
-var setCurrentTimeInPlayerBar = function(currentTime) {
+var setCurrentTimeInPlayerBar = function() {
     $('.current-time').text(currentSoundFile.getTime());
     
 }
 
 var setTotalTimeInPlayerBar = function(totalTime) {
-    $('.total-time').text(currentSoundFile.getDuration());
+    $('.total-time').text(timeFilterCode(currentSoundFile.getDuration()));
 }
 
 var filterTimeCode = function(timeInSeconds) {
