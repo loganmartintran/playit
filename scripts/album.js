@@ -253,7 +253,7 @@ var setCurrentTimeInPlayerBar = function() {
 }
 
 var setTotalTimeInPlayerBar = function(totalTime) {
-    $('.total-time').text(timeFilterCode(currentSoundFile.getDuration()));
+    $('.total-time').text(filterTimeCode(currentSoundFile.getDuration()));
 }
 
 var filterTimeCode = function(timeInSeconds) {
