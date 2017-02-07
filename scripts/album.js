@@ -157,6 +157,7 @@ var updatePlayerBarSong = function() {
     $('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + "-" + currentAlbum.artist);
     $('.main-controls .play-pause').html(playerBarPauseButton);
     $('.total-time').text(filterTimeCode(currentSongFromAlbum.duration));
+                                           
 };
 
 var nextSong = function() {
@@ -248,7 +249,7 @@ var setVolume = function(volume) {
 }
 
 var setCurrentTimeInPlayerBar = function() {
-    $('.current-time').text(currentSoundFile.getTime());
+    $('.current-time').text(filterTimeCode(currentSoundFile.getTime()));
     
 }
 
